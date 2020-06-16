@@ -22,26 +22,26 @@ for opt_name, opt_value in opts:
 		ref = opt_value  # 参考基因组，.fa格式
 	if opt_name in ('-m', '--filter mode'):
 		mode = opt_value  # 用来选择是做脱嘌呤还是脱氨基的过滤（depurination、deamination）
-	if opt_name in ('-Z', '--screening position'):
+	if opt_name in ('-DoubleOrSingle', '--screening position'):
 		alter = opt_value  # 用来选择是5/3end两端都要符合还是任意一段（and、or）
-	if opt_name in ('-Y', '--screening length'):
+	if opt_name in ('-DetectRange', '--screening length'):
 		base_len = int(opt_value)  # 用来选择脱氨基特征过滤的时候，前后长度read中存在脱氨基特征
-	if opt_name in ('-X', '--the least number of screening changes'):
+	if opt_name in ('-DeamNum', '--the least number of screening changes'):
 		base_num = int(opt_value)  # 用来选择脱氨基特征过滤的时候，前后特定长长度read中至少存在多少个脱氨基特征
 	if opt_name in ('-t','--thread'):
 		n_compute_threads=int(opt_value)
 
 	if opt_name in ('-h', '--help'):
 		print("required parameters: -i、-o、-m、-r")
-		print("optional parameters: -h、-X、-Y、-Z、-t")
+		print("optional parameters: -h、-DeamNum、-DetectRange、-DoubleOrSingle、-t")
 		print(
 			"-i,--input:    input file(sam format)\n"
 			"-o,--output:   output file(sam format)\n"
 			"-r,--ref:	reference file(.fa format) to get the mapped seq in the reference\n"
 			"-m,--mode:	mode(depurination/deamination),based on choosed mode to filter the comtamination\n"
-			"-Z,--screening position:    alternative(and/or),\"and\" means that the program will filter the comtamination when the end of 3 and 5 both fit the conditions\n"
-			"-Y,--screening length: it means that we set up condition that in X bp in 5/3 end there are some damage patterns(for --mode deamination)\n"
-			"-X,--the least number of screening changes: it means that we set up condition that in fixed bp in 5/3 end there are X damage patterns(for --mode deamination)\n"
+			"-DoubleOrSingle,--screening position:    alternative(and/or),\"and\" means that the program will filter the comtamination when the end of 3 and 5 both fit the conditions\n"
+			"-DetectRange,--screening length: it means that we set up condition that in [-DetectRange] bp in 5/3 end there are some damage patterns(for --mode deamination)\n"
+			"-DeamNum,--the least number of screening changes: it means that we set up condition that in fixed bp in 5/3 end there are [-DeamNum] damage patterns(for --mode deamination)\n"
 			"-h,--help: "
 		)
 ##############
