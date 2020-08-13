@@ -22,19 +22,19 @@ Parameters	Parameter Type	Description
 
 4.	Example:
 
-a.	Screening based on deamination patterns:
-python AncFil.py -i path/test.sam -o path/output.sam -r reference_path/ref.fa -m deamination -DeamNum 1 -DetectRange 15 -DoubleOrSingle or
+ a.	Screening based on deamination patterns:
+ python AncFil.py -i path/test.sam -o path/output.sam -r reference_path/ref.fa -m deamination -DeamNum 1 -DetectRange 15 -DoubleOrSingle or
 
-b.	Screening based on depurination patterns:
-python AncFil.py -i path/test.sam -o path/output.sam -r reference_path/ref.fa -m depurination
+ b.	Screening based on depurination patterns:
+ python AncFil.py -i path/test.sam -o path/output.sam -r reference_path/ref.fa -m depurination
 
 
 
-(1)	The format of test.sam/output.sam: This is a normal Sam file with a format as following:
-![image](https://github.com/tianminglan/AncFil/blob/master/image_file/samfile.png)
+ (1)	The format of test.sam/output.sam: This is a normal Sam file with a format as following:
+ ![image](https://github.com/tianminglan/AncFil/blob/master/image_file/samfile.png)
 
-(2)	ref.fa: This is a reference genome file with the normal Fasta format: 
-![image](https://github.com/tianminglan/AncFil/blob/master/image_file/reference.png)
+ (2)	ref.fa: This is a reference genome file with the normal Fasta format: 
+ ![image](https://github.com/tianminglan/AncFil/blob/master/image_file/reference.png)
 
 5.	Output files:
 The AncFil will finally generate 1 output file:
