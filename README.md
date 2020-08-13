@@ -21,6 +21,7 @@ Parameters	Parameter Type	Description
 -h	string	Show the help message
 
 4.	Example:
+
 a.	Screening based on deamination patterns:
 python AncFil.py -i path/test.sam -o path/output.sam -r reference_path/ref.fa -m deamination -DeamNum 1 -DetectRange 15 -DoubleOrSingle or
 
